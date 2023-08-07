@@ -11,6 +11,7 @@ export function buildPlugins({ paths }: BuildOptions): webpack.WebpackPluginInst
     }),
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({
+      // чтобв стили css создавались отдельным файлом в сборке
       filename: 'css/[name].[contenthans:8].css',
       chunkFilename: 'css/[name].[contenthans:8].css',
     }),
