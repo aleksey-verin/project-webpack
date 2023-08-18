@@ -5,6 +5,7 @@ import { useTheme } from 'app/providers/ThemeProvider'
 import { AppRouter } from './providers/router'
 import { Navbar } from 'widgets/Navbar'
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
+import { SideBar } from 'widgets/SideBar'
 
 interface AppProps {}
 
@@ -14,7 +15,11 @@ const App: FC<AppProps> = ({}) => {
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar />
-      <AppRouter />
+      <div className='content-page'>
+        <SideBar />
+        <AppRouter />
+        {/* <div>Main Page</div> */}
+      </div>
     </div>
   )
 }
